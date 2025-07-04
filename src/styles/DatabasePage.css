@@ -1,0 +1,71 @@
+/* DatabasePage.css */
+
+.page-container {
+  padding: 20px;
+  background-color: #f4f7f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.page-container h2 {
+  color: #009999;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #009999;
+  color: white;
+}
+
+thead th {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f1f9ff;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+td:last-child span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody td {
+    padding: 10px;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    color: #444;
+  }
+}
